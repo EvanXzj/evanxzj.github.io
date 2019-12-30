@@ -20,5 +20,14 @@
       <description>&lt;p&gt;JavaScript在ES6中引入了符号来防止属性名称冲突。此外，在2015-2019年的JavaScript中，符号还提供了一种模拟私有属性的方法。&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>Create Personal Blog With Hugo and Github Pages</title>
+      <link>http://localhost:1313/post/create-personal-blog-with-hugo-and-github-pages/</link>
+      <pubDate>Sat, 30 Dec 2017 11:27:47 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/create-personal-blog-with-hugo-and-github-pages/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
