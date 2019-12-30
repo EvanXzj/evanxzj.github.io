@@ -6,7 +6,7 @@
     <description>Recent content on Chuidylan&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 29 Aug 2018 21:41:52 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 07 Mar 2019 16:26:58 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,12 +21,30 @@
     </item>
     
     <item>
+      <title>XXX Software Setup</title>
+      <link>http://localhost:1313/post/xxx-software-setup/</link>
+      <pubDate>Thu, 07 Mar 2019 16:26:58 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/xxx-software-setup/</guid>
+      <description>&lt;p&gt;XXX 软件搭建过程，你懂的！ 放飞自我~~~&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Javascript Symbol 实用指南</title>
       <link>http://localhost:1313/post/a-practical-guide-to-symbols-in-javascript/</link>
       <pubDate>Wed, 29 Aug 2018 21:41:52 +0800</pubDate>
       
       <guid>http://localhost:1313/post/a-practical-guide-to-symbols-in-javascript/</guid>
       <description>&lt;p&gt;JavaScript在ES6中引入了符号来防止属性名称冲突。此外，在2015-2019年的JavaScript中，符号还提供了一种模拟私有属性的方法。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu 16.04 初始化设置</title>
+      <link>http://localhost:1313/post/ubuntu-16.04-setup/</link>
+      <pubDate>Tue, 14 Aug 2018 11:59:51 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/ubuntu-16.04-setup/</guid>
+      <description>&lt;p&gt;当你第一次创建ubuntu 16.04版本的服务器时，有一些配置步骤作为基础配置的一部分是需要你尽早设置的，这将增加服务器的安全性和可用性，并为后续操作提供坚实的基础。&lt;/p&gt;</description>
     </item>
     
     <item>

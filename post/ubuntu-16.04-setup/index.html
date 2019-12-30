@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Ubuntu 16.04 初始化设置 - Chuidylan&#39;s Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="chuidylan" /><meta name="description" content="Ubuntu 16.04 初始化设置" /><meta name="keywords" content="Linux, ubuntu" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.61.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/ubuntu-16.04-setup/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Ubuntu 16.04 初始化设置" />
+<meta property="og:description" content="Ubuntu 16.04 初始化设置" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/ubuntu-16.04-setup/" />
+<meta property="article:published_time" content="2018-08-14T11:59:51+08:00" />
+<meta property="article:modified_time" content="2018-08-14T11:59:51+08:00" />
+<meta itemprop="name" content="Ubuntu 16.04 初始化设置">
+<meta itemprop="description" content="Ubuntu 16.04 初始化设置">
+<meta itemprop="datePublished" content="2018-08-14T11:59:51&#43;08:00" />
+<meta itemprop="dateModified" content="2018-08-14T11:59:51&#43;08:00" />
+<meta itemprop="wordCount" content="800">
+
+
+
+<meta itemprop="keywords" content="ubuntu," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Ubuntu 16.04 初始化设置"/>
+<meta name="twitter:description" content="Ubuntu 16.04 初始化设置"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Chuidylan&#39;s Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Chuidylan&#39;s Blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Ubuntu 16.04 初始化设置</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-08-14 </span>
+        <div class="post-category">
+            <a href="/categories/linux/"> Linux </a>
+            </div>
+          <span class="more-meta"> 800 words </span>
+          <span class="more-meta"> 2 mins read </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#01-terminal-">01. Terminal 远程登录云服务主机</a></li>
+    <li><a href="#02-">02. 管理用户</a></li>
+    <li><a href="#03-ssh-auth--">03. SSH Auth  无密码登录（安全可靠）</a></li>
+    <li><a href="#04-sudo-">04. 设置sudo 不需要输入密码</a></li>
+    <li><a href="#05-docker">05. 安装Docker</a></li>
+    <li><a href="#06-">06. 阿里云服务器公网开放端口</a></li>
+    <li><a href="#07-">07. 参考文章</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>当你第一次创建ubuntu 16.04版本的服务器时，有一些配置步骤作为基础配置的一部分是需要你尽早设置的，这将增加服务器的安全性和可用性，并为后续操作提供坚实的基础。</p>
+<h2 id="01-terminal-">01. Terminal 远程登录云服务主机</h2>
+<ol>
+<li>
+<p>登录<a href="https://www.aliyun.com/?spm=5176.2020520101.aliyun_topbar.1.35444df5jMZ9pr">阿里云服务控制台</a></p>
+</li>
+<li>
+<p>页面左侧找到<code>云服务器ECS</code>, 点击找到服务器<code>实例</code></p>
+</li>
+<li>
+<p>复制<code>公有IP地址</code></p>
+</li>
+<li>
+<p>本地打开<code>Terminal</code>, 通过下面命令登录</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ssh username@ip
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>密码验证， 输入购买时设定的服务器密码，如果忘记了，可以在实例界面重置密码</p>
+</li>
+</ol>
+<h2 id="02-">02. 管理用户</h2>
+<ol>
+<li>
+<p>添加用户</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo adduser username  <span class="c1"># 然后根据提示输入信息</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>赋予新用户sudo权限</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo usermod -aG sudo username
+   
+<span class="c1"># annother way</span>
+<span class="c1"># $ visudo</span>
+#
+<span class="c1"># add this line below &#39; User privilege specification area&#39;</span>
+<span class="c1"># usernmae  ALL=(ALL:ALL) ALL</span>
+<span class="c1"># 用户名     所有主机 = （所有用户可执行命令：所有组可执行命令） 所有命令</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>修改用户密码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo passwd username
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>删除用户</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo deluser username 
+
+<span class="c1"># 连同用户home目录一起删除</span> 
+$ sudo deluser --remove-home newuser
+
+<span class="c1"># 如果该用户用于sudo权限， 通过visudo命令，删除对应用户对应行记录即可</span> 
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h2 id="03-ssh-auth--">03. SSH Auth  无密码登录（安全可靠）</h2>
+<ol>
+<li>
+<p>在本地生成秘钥</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">ssh-keygen       <span class="c1"># 不要输入密码</span>
+
+<span class="c1"># 默认在用户.ssh目录下。</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>将公钥上传至远程服务器</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">mkdir .ssh
+touch  .ssh/authorized_keys
+<span class="c1"># 手动复制本地公钥内容到`authorized_keys`</span>
+
+<span class="c1"># ssh 命令方式（推荐）</span>
+ssh-copy-id username@host
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>修改文件权限</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">chmod <span class="m">777</span> .ssh
+chomd <span class="m">644</span> .ssh/authorized_keys
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>禁用root用户SSH 登录</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 修改 PermitRootLogin no</span>
+vim /etc/ssh/sshd_config <span class="o">[</span>etcsshsshdconfig<span class="o">]</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>禁用基于密码的登录</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 添加 `PasswordAuthentication no`, 保存退出</span>
+sudo vim /etc/ssh/ssh_config
+
+<span class="c1"># 重启ssh auth 服务</span>
+sudo service ssh restart
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h2 id="04-sudo-">04. 设置sudo 不需要输入密码</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo vim /etc/sudoers
+
+<span class="c1"># 修改对应一行</span>
+<span class="c1"># %sudo   ALL=(ALL:ALL) NOPASSWD: NOPASSWD: ALL</span>
+
+<span class="c1"># 详情请参考 man sudoers</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="05-docker">05. 安装Docker</h2>
+<ol>
+<li>
+<p>参照 <a href="https://docs.docker.com/install/linux/docker-ce/ubuntu/">docker官网</a></p>
+</li>
+<li>
+<p>将 用户添加到<code>docker</code>组</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo usermod -aG docker username
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<h2 id="06-">06. 阿里云服务器公网开放端口</h2>
+<ol>
+<li>登录阿里云服务器控制台</li>
+<li>实例操作点击<code>更多</code>选择<code>安全组配置</code>，进入实例安全组配置界面选择<code>配置规则</code></li>
+<li>点击<code>添加安全组规则</code>， 在弹出界面输入参数</li>
+<li>重启服务</li>
+</ol>
+<h2 id="07-">07. 参考文章</h2>
+<ul>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-add-and-delete-users-on-ubuntu-16-04">How to Add and Delete Users on Ubuntu 16.04</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-edit-the-sudoers-file-on-ubuntu-and-centos">How To Edit the Sudoers File on Ubuntu and CentOS</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-1604">How To Set Up SSH Keys on Ubuntu 16.04</a></li>
+</ul>
+<blockquote>
+<p><!-- raw HTML omitted -->声明: 本文只作学习用途，如有侵权请及时联系<!-- raw HTML omitted -->Chui Dylan<!-- raw HTML omitted -->删除，谢谢！！！<!-- raw HTML omitted --></p>
+</blockquote>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">chuidylan</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2018-08-14
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/ubuntu/">ubuntu</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/a-practical-guide-to-symbols-in-javascript/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Javascript Symbol 实用指南</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/create-personal-blog-with-hugo-and-github-pages/">
+            <span class="next-text nav-default">Create Personal Blog With Hugo and Github Pages</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'chuidylan';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:chuidylan@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/EvanXzj" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> site uv: <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">chuidylan</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
