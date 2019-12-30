@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Javascript Symbol 实用指南 - Chuidylan&#39;s Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="chuidylan" /><meta name="description" content="A Practical Guide to Symbols in JavaScript" /><meta name="keywords" content="Javascript, Node, Symbol" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.61.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/a-practical-guide-to-symbols-in-javascript/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Javascript Symbol 实用指南" />
+<meta property="og:description" content="A Practical Guide to Symbols in JavaScript" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/a-practical-guide-to-symbols-in-javascript/" />
+<meta property="article:published_time" content="2018-08-29T21:41:52+08:00" />
+<meta property="article:modified_time" content="2018-08-29T21:41:52+08:00" />
+<meta itemprop="name" content="Javascript Symbol 实用指南">
+<meta itemprop="description" content="A Practical Guide to Symbols in JavaScript">
+<meta itemprop="datePublished" content="2018-08-29T21:41:52&#43;08:00" />
+<meta itemprop="dateModified" content="2018-08-29T21:41:52&#43;08:00" />
+<meta itemprop="wordCount" content="1580">
+
+
+
+<meta itemprop="keywords" content="Node,Javascript," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Javascript Symbol 实用指南"/>
+<meta name="twitter:description" content="A Practical Guide to Symbols in JavaScript"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Chuidylan&#39;s Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Chuidylan&#39;s Blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Javascript Symbol 实用指南</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-08-29 </span>
+        <div class="post-category">
+            <a href="/categories/javascript/"> Javascript </a>
+            </div>
+          <span class="more-meta"> 1580 words </span>
+          <span class="more-meta"> 4 mins read </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#heading">介绍</a></li>
+    <li><a href="#heading-1">描述</a></li>
+    <li><a href="#heading-2">命名冲突</a></li>
+    <li><a href="#heading-3">私有属性</a></li>
+    <li><a href="#heading-4">原文链接</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>JavaScript在ES6中引入了符号来防止属性名称冲突。此外，在2015-2019年的JavaScript中，符号还提供了一种模拟私有属性的方法。</p>
+<h2 id="heading">介绍</h2>
+<p>在JavaScript中创建symbol的最简单方法是调用<code>Symbol()</code>函数。使symbol如此特殊的两个关键属性是:</p>
+<ul>
+<li>符号可以用作对象键。只有字符串和symbol可以用作对象键。</li>
+<li>没有两个symbol是相等的。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">s1</span> <span class="o">=</span> <span class="nx">Symbol</span><span class="p">(</span><span class="p">)</span>
+<span class="kr">const</span> <span class="nx">s2</span> <span class="o">=</span> <span class="nx">Symblo</span><span class="p">(</span><span class="p">)</span>
+
+<span class="nx">s1</span> <span class="o">===</span> <span class="nx">s2</span> <span class="c1">// false
+</span><span class="c1"></span>
+<span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="p">}</span>
+
+<span class="nx">obj</span><span class="p">[</span><span class="nx">s1</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span>
+<span class="nx">obj</span><span class="p">[</span><span class="nx">s2</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;world&#39;</span>
+
+<span class="nx">obj</span><span class="p">[</span><span class="nx">s1</span><span class="p">]</span> <span class="c1">// &#39;hello&#39;
+</span><span class="c1"></span><span class="nx">obj</span><span class="p">[</span><span class="nx">s2</span><span class="p">]</span> <span class="c1">// &#39;world&#39;
+</span></code></pre></td></tr></table>
+</div>
+</div><p>尽管Symbol()调用使它看起来像是对象，但在JavaScript中，symblo实际上是<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures">Javascript基本类型</a>。使用new 关键字调用Symbol会报错。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">s1</span> <span class="o">=</span> <span class="nx">Symbol</span><span class="p">(</span><span class="p">)</span>
+
+<span class="k">typeof</span> <span class="nx">s1</span> <span class="c1">// &#39;symbol&#39;
+</span><span class="c1"></span><span class="nx">s1</span> <span class="k">instanceof</span> <span class="nb">Object</span> <span class="c1">// false
+</span><span class="c1"></span>
+<span class="c1">// Throws &#34;TypeError: Symbol is not a constructor&#34;
+</span><span class="c1"></span><span class="k">new</span> <span class="nx">Symbol</span><span class="p">(</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="heading-1">描述</h2>
+<p>Symbol()函数只接受一个参数，即字符串描述<code>description</code>。symbol的描述仅用于调试目的——<code>description</code>显示在符号的toString()的输出中。然而，具有相同描述的两个symbol是不相等的。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">s1</span> <span class="o">=</span> <span class="nx">Symbol</span><span class="p">(</span><span class="s1">&#39;my symbol&#39;</span><span class="p">)</span>
+<span class="kr">const</span> <span class="nx">s2</span> <span class="o">=</span> <span class="nx">Symbol</span><span class="p">(</span><span class="s1">&#39;my symbol&#39;</span><span class="p">)</span>
+
+<span class="nx">s1</span> <span class="o">===</span> <span class="nx">s2</span><span class="p">;</span> <span class="c1">// false
+</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">s1</span><span class="p">)</span><span class="p">;</span> <span class="c1">// &#39;Symbol(my symbol)&#39;
+</span></code></pre></td></tr></table>
+</div>
+</div><p>还有一个全局symbol注册表。通过Symbol.for()创建symbol会将其添加到全局注册表中，由symbol的描述作为键值。换句话说，如果您使用Symbol.for()创建两个具有相同描述的symbol，那么这两个symbol是相等的。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">s1</span> <span class="o">=</span> <span class="nx">Symbol</span><span class="p">.</span><span class="k">for</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">)</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">s1</span> <span class="o">=</span> <span class="nx">Symbol</span><span class="p">.</span><span class="k">for</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">)</span><span class="p">;</span>
+
+<span class="nx">s1</span> <span class="o">===</span> <span class="nx">s2</span><span class="p">;</span> <span class="c1">// true
+</span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">s1</span><span class="p">)</span><span class="p">;</span> <span class="c1">// &#39;Symbol(test)&#39;
+</span></code></pre></td></tr></table>
+</div>
+</div><p>一般来说，除非有很好的理由，否则不应该使用全局symbol注册表，因为可能会遇到命名冲突。</p>
+<h2 id="heading-2">命名冲突</h2>
+<p>JavaScript ES6 中的第一个内置symbol 是<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator"><code>Symbol.iterator</code>symbol</a>。具有<code>Symbol.iterator</code>方法的对象被认为是<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol"><em>可迭代的</em></a>。这意味着您可以通过<a href="http://thecodebarbarian.com/for-vs-for-each-vs-for-in-vs-for-of-in-javascript"><code>for/of</code>循环</a>来遍历对象。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">const</span> <span class="nx">fibonacci</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">[</span><span class="nx">Symbol</span><span class="p">.</span><span class="nx">iterator</span><span class="p">]</span><span class="o">:</span> <span class="kd">function</span><span class="o">*</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">temp</span><span class="p">;</span>
+
+    <span class="k">yield</span> <span class="nx">b</span><span class="p">;</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">temp</span> <span class="o">=</span> <span class="nx">a</span><span class="p">;</span>
+      <span class="nx">a</span> <span class="o">=</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
+      <span class="nx">b</span> <span class="o">=</span> <span class="nx">temp</span><span class="p">;</span>
+      <span class="k">yield</span> <span class="nx">b</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span><span class="p">;</span>
+
+<span class="c1">// Prints every Fibonacci number less than 100
+</span><span class="c1"></span><span class="k">for</span> <span class="p">(</span><span class="kr">const</span> <span class="nx">x</span> <span class="k">of</span> <span class="nx">fibonacci</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">x</span> <span class="o">&gt;=</span> <span class="mi">100</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">break</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>为什么<code>Symbol.iterator</code>用symbol而不是字符串？假设不是使用<code>Symbol.iterator</code>，可迭代规范检查了字符串属性的存在<code>'iterator'</code>。此外，假设您具有下面的类，该类是可迭代的。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">class</span> <span class="nx">MyClass</span> <span class="p">{</span>
+  <span class="nx">constructor</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">obj</span><span class="p">)</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="nx">iterator</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">keys</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="k">this</span><span class="p">)</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">return</span> <span class="p">(</span><span class="kd">function</span><span class="o">*</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">i</span> <span class="o">&gt;=</span> <span class="nx">keys</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="k">yield</span> <span class="nx">keys</span><span class="p">[</span><span class="nx">i</span><span class="o">++</span><span class="p">]</span><span class="p">;</span>
+    <span class="p">}</span><span class="p">)</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><code>MyClass</code>的实例将是可迭代的，可让您迭代对象的键。但是以上类别也有潜在的缺陷。假设恶意用户要将具有<code>iterator</code>属性的对象传递给<code>MyClass</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MyClass</span><span class="p">(</span><span class="p">{</span> <span class="nx">iterator</span><span class="o">:</span> <span class="s1">&#39;not a function&#39;</span> <span class="p">}</span><span class="p">)</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>如果要使用<code>for/of</code>遍历 <code>obj</code>，JavaScript会抛出异常<code>TypeError: obj is not iterable</code>。这是因为用户指定的<code>iterator</code>函数将覆盖类的迭代器属性。这是与<a href="http://thecodebarbarian.com/mongoose-prototype-pollution-vulnerability-disclosure">原型污染</a>类似的安全问题，在这种情况下，天真地复制用户数据可能会导致具有诸如<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto"><code>__proto__</code></a>和的特殊属性的问题<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor"><code>constructor</code></a>。</p>
+<h2 id="heading-3">私有属性</h2>
+<p>由于没有两个symbol相等，因此symbolk是在JavaScript中模拟私有属性的便捷方法。symbol不会出现在中<code>Object.keys()</code>，因此，除非您显式地<code>export</code>倒出，否则除非您显式地通过<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols"><code>Object.getOwnPropertySymbols()</code>方法获取</a>，否则其他代码都不能访问该属性。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">getObj</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">symbol</span> <span class="o">=</span> <span class="nx">Symbol</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">)</span><span class="p">;</span>
+  <span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span><span class="p">}</span><span class="p">;</span>
+  <span class="nx">obj</span><span class="p">[</span><span class="nx">symbol</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;test&#39;</span><span class="p">;</span>
+  <span class="k">return</span> <span class="nx">obj</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="nx">getObj</span><span class="p">(</span><span class="p">)</span><span class="p">;</span>
+
+<span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span><span class="p">;</span> <span class="c1">// []
+</span><span class="c1"></span>
+<span class="c1">// Unless you explicitly have a reference to the symbol, you can&#39;t access the
+</span><span class="c1"></span><span class="c1">// symbol property.
+</span><span class="c1"></span><span class="nx">obj</span><span class="p">[</span><span class="nx">Symbol</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">)</span><span class="p">]</span><span class="p">;</span> <span class="c1">// undefined
+</span><span class="c1"></span>
+<span class="c1">// You can still get a reference to the symbol using `getOwnPropertySymbols()`
+</span><span class="c1"></span><span class="kr">const</span> <span class="p">[</span><span class="nx">symbol</span><span class="p">]</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">getOwnPropertySymbols</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span><span class="p">;</span>
+<span class="nx">obj</span><span class="p">[</span><span class="nx">symbol</span><span class="p">]</span><span class="p">;</span> <span class="c1">// &#39;test&#39;
+</span></code></pre></td></tr></table>
+</div>
+</div><p>symbol对于私有属性很方便，也因为它们不会显示在<a href="http://thecodebarbarian.com/the-80-20-guide-to-json-stringify-in-javascript.html"><code>JSON.stringify()</code>输出中</a>。具体来说，<a href="https://masteringjs.io/tutorials/fundamentals/stringify#converting-values-to-json"><code>JSON.stringify()</code>默认忽略symbol键和值</a>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">symbol</span> <span class="o">=</span> <span class="nx">Symbol</span><span class="p">(</span><span class="s1">&#39;test&#39;</span><span class="p">)</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span> <span class="p">[</span><span class="nx">symbol</span><span class="p">]</span><span class="o">:</span> <span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="nx">test</span><span class="o">:</span> <span class="nx">symbol</span> <span class="p">}</span><span class="p">;</span>
+
+<span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">obj</span><span class="p">)</span><span class="p">;</span> <span class="c1">// &#34;{}&#34;
+</span></code></pre></td></tr></table>
+</div>
+</div><h2 id="heading-4">原文链接</h2>
+<p><a href="http://thecodebarbarian.com/a-practical-guide-to-symbols-in-javascript.html">A Practical Guide to Symbols in JavaScript</a></p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">chuidylan</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2018-08-29
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/node/">Node</a>
+          <a href="/tags/javascript/">Javascript</a>
+          </div>
+      <nav class="post-nav">
+        
+        
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'chuidylan';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:chuidylan@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/EvanXzj" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> site uv: <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">chuidylan</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

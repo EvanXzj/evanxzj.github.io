@@ -13,10 +13,10 @@
     
     <item>
       <title>Javascript Symbol 实用指南</title>
-      <link>http://localhost:1313/post/my-first-post/</link>
+      <link>http://localhost:1313/post/a-practical-guide-to-symbols-in-javascript/</link>
       <pubDate>Wed, 29 Aug 2018 21:41:52 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/my-first-post/</guid>
+      <guid>http://localhost:1313/post/a-practical-guide-to-symbols-in-javascript/</guid>
       <description>&lt;p&gt;JavaScript在ES6中引入了符号来防止属性名称冲突。此外，在2015-2019年的JavaScript中，符号还提供了一种模拟私有属性的方法。&lt;/p&gt;</description>
     </item>
     
