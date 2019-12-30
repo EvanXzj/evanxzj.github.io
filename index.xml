@@ -26,8 +26,7 @@
       <pubDate>Wed, 29 Aug 2018 21:41:52 +0800</pubDate>
       
       <guid>http://localhost:1313/post/my-first-post/</guid>
-      <description>&lt;h1 id=&#34;javascript-symbol-&#34;&gt;Javascript symbol 实用指南&lt;/h1&gt;
-&lt;p&gt;JavaScript在ES6中引入了符号来防止属性名称冲突。此外，在2015-2019年的JavaScript中，符号还提供了一种模拟私有属性的方法。&lt;/p&gt;</description>
+      <description>&lt;p&gt;JavaScript在ES6中引入了符号来防止属性名称冲突。此外，在2015-2019年的JavaScript中，符号还提供了一种模拟私有属性的方法。&lt;/p&gt;</description>
     </item>
     
   </channel>
