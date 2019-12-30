@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vim on Chuidylan&#39;s Blog</title>
+    <link>http://localhost:1313/categories/vim/</link>
+    <description>Recent content in Vim on Chuidylan&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 15 Mar 2019 15:59:52 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/vim/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vim 快速入门</title>
+      <link>http://localhost:1313/post/vim-getting-start/</link>
+      <pubDate>Fri, 15 Mar 2019 15:59:52 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/vim-getting-start/</guid>
+      <description>&lt;p&gt;Vim是一个类似于Vi的著名的功能强大、高度可定制的文本编辑器，在Vi的基础上改进和增加了很多特性。VIM是自由软件。本篇文章是作者的学习笔记，发布本篇文章主要为了备忘，同时也希望能帮助读者快速入门Vim。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
