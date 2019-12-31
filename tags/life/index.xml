@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Life on Chuidylan&#39;s Blog</title>
+    <link>http://localhost:1313/tags/life/</link>
+    <description>Recent content in Life on Chuidylan&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 15 Apr 2019 11:30:58 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/life/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>【译】生命的意义</title>
+      <link>http://localhost:1313/post/the-meaning-of-life/</link>
+      <pubDate>Mon, 15 Apr 2019 11:30:58 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/the-meaning-of-life/</guid>
+      <description>&lt;p&gt;Edward Perman Cole died in May. it was a Sunday afternoon and there wasn&#39;t a cloud in the sky.&lt;/p&gt;
+&lt;p&gt;爱德华 · 佩瑞曼 · 科尔在五月一个周日下午去世了，那天天空万里无云。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>生活杂记(一)</title>
+      <link>http://localhost:1313/post/life-story-01/</link>
+      <pubDate>Fri, 22 Mar 2019 11:40:20 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/life-story-01/</guid>
+      <description>&lt;p&gt;生活不只是苟且！！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

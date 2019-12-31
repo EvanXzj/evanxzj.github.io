@@ -6,10 +6,46 @@
     <description>Recent content in Tags on Chuidylan&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 15 Mar 2019 15:59:52 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 26 Apr 2019 11:33:03 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>poet</title>
+      <link>http://localhost:1313/tags/poet/</link>
+      <pubDate>Fri, 26 Apr 2019 11:33:03 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/poet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>叶芝</title>
+      <link>http://localhost:1313/tags/%E5%8F%B6%E8%8A%9D/</link>
+      <pubDate>Fri, 26 Apr 2019 11:33:03 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/%E5%8F%B6%E8%8A%9D/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Life</title>
+      <link>http://localhost:1313/tags/life/</link>
+      <pubDate>Mon, 15 Apr 2019 11:30:58 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/life/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>人生</title>
+      <link>http://localhost:1313/tags/%E4%BA%BA%E7%94%9F/</link>
+      <pubDate>Fri, 22 Mar 2019 11:40:20 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/%E4%BA%BA%E7%94%9F/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>editor</title>
@@ -71,6 +107,24 @@
       <pubDate>Wed, 29 Aug 2018 21:41:52 +0800</pubDate>
       
       <guid>http://localhost:1313/tags/node/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Database</title>
+      <link>http://localhost:1313/tags/database/</link>
+      <pubDate>Mon, 20 Aug 2018 22:04:39 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SQL</title>
+      <link>http://localhost:1313/tags/sql/</link>
+      <pubDate>Mon, 20 Aug 2018 22:04:39 +0800</pubDate>
+      
+      <guid>http://localhost:1313/tags/sql/</guid>
       <description></description>
     </item>
     

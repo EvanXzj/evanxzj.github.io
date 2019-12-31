@@ -6,7 +6,7 @@
     <description>Recent content on Chuidylan&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 15 Mar 2019 15:59:52 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 26 Apr 2019 11:33:03 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,7 +17,35 @@
       <pubDate>Mon, 20 Aug 2018 21:38:52 +0800</pubDate>
       
       <guid>http://localhost:1313/about/</guid>
-      <description>岁月如刀啊 两鬓的白发，满脸的皱纹以及佝偻的身影 那是岁月留下的痕迹 于是心生焦虑，奋起直追 虽是囫囵吞枣，只因怕来不及 愿岁月停留 等等迷失途中的孩子</description>
+      <description>岁月如刀啊 两鬓的白发，满脸的皱纹以及佝偻的身影 那是岁月留下的痕迹 于是心生焦虑，奋起直追 浩瀚书海，虽是囫囵吞枣，只因怕来不及 愿岁月停留 等等迷失</description>
+    </item>
+    
+    <item>
+      <title>【转】When You Are Old</title>
+      <link>http://localhost:1313/post/when-you-are-old/</link>
+      <pubDate>Fri, 26 Apr 2019 11:33:03 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/when-you-are-old/</guid>
+      <description>&lt;p&gt;《当你老了》是威廉·巴特勒·叶芝献给女友毛特·冈妮的真挚爱情诗篇。叶芝是20世纪现代主义诗坛上最著名的诗人，他对毛特·冈妮一见钟情，虽多次求婚被拒但仍对她爱慕终身。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>【译】生命的意义</title>
+      <link>http://localhost:1313/post/the-meaning-of-life/</link>
+      <pubDate>Mon, 15 Apr 2019 11:30:58 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/the-meaning-of-life/</guid>
+      <description>&lt;p&gt;Edward Perman Cole died in May. it was a Sunday afternoon and there wasn&#39;t a cloud in the sky.&lt;/p&gt;
+&lt;p&gt;爱德华 · 佩瑞曼 · 科尔在五月一个周日下午去世了，那天天空万里无云。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>生活杂记(一)</title>
+      <link>http://localhost:1313/post/life-story-01/</link>
+      <pubDate>Fri, 22 Mar 2019 11:40:20 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/life-story-01/</guid>
+      <description>&lt;p&gt;生活不只是苟且！！&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -48,6 +76,15 @@
     </item>
     
     <item>
+      <title>SQL结构化查询语言学习</title>
+      <link>http://localhost:1313/post/structured-query-language-learning/</link>
+      <pubDate>Mon, 20 Aug 2018 22:04:39 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/structured-query-language-learning/</guid>
+      <description>&lt;p&gt;SQL(Structured Query Language) 是结构化查询语言的简称，它最重要的是数据库的操作语言。 对于学习数据库而言，学习SQL的使用是相当的重要!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Ubuntu 16.04 初始化设置</title>
       <link>http://localhost:1313/post/ubuntu-16.04-setup/</link>
       <pubDate>Tue, 14 Aug 2018 11:59:51 +0800</pubDate>
@@ -62,7 +99,7 @@
       <pubDate>Sat, 30 Dec 2017 11:27:47 +0800</pubDate>
       
       <guid>http://localhost:1313/post/create-personal-blog-with-hugo-and-github-pages/</guid>
-      <description></description>
+      <description>声明: 本文只作学习用途，如有侵权请及时联系Chui Dylan删除，谢谢！！！</description>
     </item>
     
   </channel>
