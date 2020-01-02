@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Deploying Go Web Apps to Heroku - Chuidylan&#39;s Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="chuidylan" /><meta name="description" content="Deploying Go Web Apps to Heroku" /><meta name="keywords" content="go, golang, webapp, heroku, cloud" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.61.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/deploying-go-web-apps-to-heroku/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Deploying Go Web Apps to Heroku" />
+<meta property="og:description" content="Deploying Go Web Apps to Heroku" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/deploying-go-web-apps-to-heroku/" />
+<meta property="article:published_time" content="2019-01-29T15:14:21+08:00" />
+<meta property="article:modified_time" content="2019-01-29T15:14:21+08:00" />
+<meta itemprop="name" content="Deploying Go Web Apps to Heroku">
+<meta itemprop="description" content="Deploying Go Web Apps to Heroku">
+<meta itemprop="datePublished" content="2019-01-29T15:14:21&#43;08:00" />
+<meta itemprop="dateModified" content="2019-01-29T15:14:21&#43;08:00" />
+<meta itemprop="wordCount" content="724">
+
+
+
+<meta itemprop="keywords" content="go,heroku,web," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Deploying Go Web Apps to Heroku"/>
+<meta name="twitter:description" content="Deploying Go Web Apps to Heroku"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Chuidylan&#39;s Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Chuidylan&#39;s Blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Deploying Go Web Apps to Heroku</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-01-29 </span>
+        <div class="post-category">
+            <a href="/categories/go/"> Go </a>
+            <a href="/categories/heroku/"> HeroKu </a>
+            </div>
+          <span class="more-meta"> 724 words </span>
+          <span class="more-meta"> 2 mins read </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-heroku">1. 注册Heroku账号</a></li>
+    <li><a href="#2-heroku-cli">2. 安装Heroku CLI</a></li>
+    <li><a href="#3-app-">3. APP 源代码</a></li>
+    <li><a href="#4-">4. 安装项目依赖(可选)</a></li>
+    <li><a href="#5-procfile">5. 创建Procfile文件</a></li>
+    <li><a href="#6-git">6. 使用Git管理源代码</a></li>
+    <li><a href="#7-heroku">7. 创建HeroKu应用</a></li>
+    <li><a href="#8-">8. 部署应用</a></li>
+    <li><a href="#9-">9. 测试</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p><a href="%5B(https://www.heroku.com/)%5D">Heroku</a> 是 Salesforce 旗下云服务商，提供方便便捷的各种云服务，如服务器，数据库，监控，计算等等。并且他提供了免费版本，这使得我们这些平时想搞一些小东西的人提供了莫大的便捷，虽然他有时长和宕机的限制，但是对于个人小程序来说已经足够了。</p>
+<h2 id="1-heroku">1. 注册Heroku账号</h2>
+<p>点击<a href="http://heroku.com/signup">注册</a>一个新账号， heroku初始免费提供<code>5</code>个应用</p>
+<h2 id="2-heroku-cli">2. 安装Heroku CLI</h2>
+<p>查看<a href="https://devcenter.heroku.com/articles/heroku-cli#download-and-install">下载页面</a>, 选择符合自己电脑的安装方式</p>
+<ul>
+<li>验证安装, 只要输出以下类似信息即可</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">heroku version
+<span class="c1"># heroku/7.22.3 darwin-x64 node-v11.10.1</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>使用刚刚创建的账号登录Heroku CLI</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">heroku login
+<span class="c1"># 根据提示输入信息即可</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="3-app-">3. APP 源代码</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-golang" data-lang="golang"><span class="kn">package</span> <span class="nx">main</span>
+
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&#34;fmt&#34;</span>
+	<span class="s">&#34;log&#34;</span>
+	<span class="s">&#34;net/http&#34;</span>
+	<span class="s">&#34;os&#34;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">(</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">http</span><span class="p">.</span><span class="nf">HandleFunc</span><span class="p">(</span><span class="s">&#34;/&#34;</span><span class="p">,</span> <span class="nx">handler</span><span class="p">)</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;listening...&#34;</span><span class="p">)</span>
+	<span class="nx">err</span> <span class="o">:=</span> <span class="nx">http</span><span class="p">.</span><span class="nf">ListenAndServe</span><span class="p">(</span><span class="nf">GetPort</span><span class="p">(</span><span class="p">)</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
+	<span class="k">if</span> <span class="nx">err</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="p">{</span>
+		<span class="nx">log</span><span class="p">.</span><span class="nf">Fatal</span><span class="p">(</span><span class="s">&#34;ListenAndServe: &#34;</span><span class="p">,</span> <span class="nx">err</span><span class="p">)</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">func</span> <span class="nf">handler</span><span class="p">(</span><span class="nx">w</span> <span class="nx">http</span><span class="p">.</span><span class="nx">ResponseWriter</span><span class="p">,</span> <span class="nx">r</span> <span class="o">*</span><span class="nx">http</span><span class="p">.</span><span class="nx">Request</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Fprintf</span><span class="p">(</span><span class="nx">w</span><span class="p">,</span> <span class="s">&#34;Hello. This is our first Go web app on Heroku!&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// Get the Port from the environment so we can run on Heroku
+</span><span class="c1"></span><span class="kd">func</span> <span class="nf">GetPort</span><span class="p">(</span><span class="p">)</span> <span class="kt">string</span> <span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">port</span> <span class="p">=</span> <span class="nx">os</span><span class="p">.</span><span class="nf">Getenv</span><span class="p">(</span><span class="s">&#34;PORT&#34;</span><span class="p">)</span>
+	<span class="c1">// Set a default port if there is nothing in the environment
+</span><span class="c1"></span>	<span class="k">if</span> <span class="nx">port</span> <span class="o">==</span> <span class="s">&#34;&#34;</span> <span class="p">{</span>
+		<span class="nx">port</span> <span class="p">=</span> <span class="s">&#34;9527&#34;</span>
+		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;INFO: No PORT environment variable detected, defaulting to &#34;</span> <span class="o">+</span> <span class="nx">port</span><span class="p">)</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="s">&#34;:&#34;</span> <span class="o">+</span> <span class="nx">port</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="4-">4. 安装项目依赖(可选)</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 1. 安装godep</span>
+go get github.com/tools/godep
+
+<span class="c1"># 2. 进入项目根目录，执行以下命令</span>
+godep save 
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="5-procfile">5. 创建Procfile文件</h2>
+<p>使用Procfile,文本文件在您的应用程序的根目录,显式地声明应该执行什么命令来启动应用程序。
+内容如下:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-txt" data-lang="txt">web: webapphr
+</code></pre></td></tr></table>
+</div>
+</div><p>web在这里很重要。它声明此流程类型将附加到Heroku的HTTP路由堆栈，并在部署时接收web流量。</p>
+<h2 id="6-git">6. 使用Git管理源代码</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ git add -A .
+$ git commit -m <span class="s2">&#34;first commit&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="7-heroku">7. 创建HeroKu应用</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">heroku create
+
+<span class="c1"># 输出信息大致如下：</span>
+<span class="c1"># Creating thawing-harbor-9085… done, stack is cedar-14</span>
+<span class="c1"># https://thawing-harbor-9085.herokuapp.com/ | https://git.heroku.com/thawing-harbor-9085.git</span>
+<span class="c1"># Git remote heroku added</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="8-">8. 部署应用</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">git push heroku master
+
+<span class="c1"># 输出信息中包含：Verifying deploy…. done. 即是发布成功</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="9-">9. 测试</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 项目根目录下输入以下命令快速打开webapp</span>
+heroku open
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>Note:</strong> 其他更多信息请参考<a href="%5B(https://www.heroku.com/)%5D">HeroKu官网文档</a></p>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">chuidylan</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-01-29
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/go/">go</a>
+          <a href="/tags/heroku/">heroku</a>
+          <a href="/tags/web/">web</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/xxx-software-setup/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">XXX Software Setup</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/https-your-website/">
+            <span class="next-text nav-default">使用Let Encrypts, HTTPS你的网站(Ubuntu)</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'chuidylan';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:chuidylan@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/EvanXzj" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> site uv: <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">chuidylan</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

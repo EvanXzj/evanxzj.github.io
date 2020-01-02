@@ -57,6 +57,33 @@
     </item>
     
     <item>
+      <title>Go</title>
+      <link>http://localhost:1313/categories/go/</link>
+      <pubDate>Tue, 29 Jan 2019 15:14:21 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HeroKu</title>
+      <link>http://localhost:1313/categories/heroku/</link>
+      <pubDate>Tue, 29 Jan 2019 15:14:21 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/heroku/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>http://localhost:1313/categories/ubuntu/</link>
+      <pubDate>Tue, 08 Jan 2019 14:49:28 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Javascript</title>
       <link>http://localhost:1313/categories/javascript/</link>
       <pubDate>Wed, 29 Aug 2018 21:41:52 +0800</pubDate>
@@ -80,6 +107,15 @@
       <pubDate>Mon, 20 Aug 2018 22:04:39 +0800</pubDate>
       
       <guid>http://localhost:1313/categories/sql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Algorithm</title>
+      <link>http://localhost:1313/categories/algorithm/</link>
+      <pubDate>Fri, 10 Aug 2018 17:13:33 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/algorithm/</guid>
       <description></description>
     </item>
     

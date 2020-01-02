@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>go on Chuidylan&#39;s Blog</title>
+    <link>http://localhost:1313/tags/go/</link>
+    <description>Recent content in go on Chuidylan&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 29 Jan 2019 15:14:21 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Deploying Go Web Apps to Heroku</title>
+      <link>http://localhost:1313/post/deploying-go-web-apps-to-heroku/</link>
+      <pubDate>Tue, 29 Jan 2019 15:14:21 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/deploying-go-web-apps-to-heroku/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;%5B(https://www.heroku.com/)%5D&#34;&gt;Heroku&lt;/a&gt; 是 Salesforce 旗下云服务商，提供方便便捷的各种云服务，如服务器，数据库，监控，计算等等。并且他提供了免费版本，这使得我们这些平时想搞一些小东西的人提供了莫大的便捷，虽然他有时长和宕机的限制，但是对于个人小程序来说已经足够了。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

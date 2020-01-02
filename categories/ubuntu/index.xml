@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on Chuidylan&#39;s Blog</title>
+    <link>http://localhost:1313/categories/ubuntu/</link>
+    <description>Recent content in Ubuntu on Chuidylan&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 08 Jan 2019 14:49:28 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用Let Encrypts, HTTPS你的网站(Ubuntu)</title>
+      <link>http://localhost:1313/post/https-your-website/</link>
+      <pubDate>Tue, 08 Jan 2019 14:49:28 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/https-your-website/</guid>
+      <description>&lt;p&gt;HTTPS（全称：Hyper Text Transfer Protocol over Secure Socket Layer 或 Hypertext Transfer Protocol Secure，超文本传输安全协议），是以安全为目标的HTTP通道，简单讲是HTTP的安全版&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu 16.04 初始化设置</title>
+      <link>http://localhost:1313/post/ubuntu-16.04-setup/</link>
+      <pubDate>Tue, 14 Aug 2018 11:59:51 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/ubuntu-16.04-setup/</guid>
+      <description>&lt;p&gt;当你第一次创建ubuntu 16.04版本的服务器时，有一些配置步骤作为基础配置的一部分是需要你尽早设置的，这将增加服务器的安全性和可用性，并为后续操作提供坚实的基础。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

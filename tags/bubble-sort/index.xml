@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bubble sort on Chuidylan&#39;s Blog</title>
+    <link>http://localhost:1313/tags/bubble-sort/</link>
+    <description>Recent content in bubble sort on Chuidylan&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 10 Aug 2018 17:13:33 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/bubble-sort/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>冒泡排序</title>
+      <link>http://localhost:1313/post/bubble-sort-algorithm/</link>
+      <pubDate>Fri, 10 Aug 2018 17:13:33 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/bubble-sort-algorithm/</guid>
+      <description>&lt;p&gt;冒泡排序(Bubble Sort), 是一种计算机科学领域的比较简单的排序算法，也是程序猿们在面试中常被问的排序算法之一。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
