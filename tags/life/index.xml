@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Life on Chuidylan&#39;s Blog</title>
+    <title>life on Chuidylan&#39;s Blog</title>
     <link>http://localhost:1313/tags/life/</link>
-    <description>Recent content in Life on Chuidylan&#39;s Blog</description>
+    <description>Recent content in life on Chuidylan&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 15 Apr 2019 11:30:58 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jan 2020 13:01:25 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/tags/life/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Biggest Mistake Is You Think You Have Time</title>
+      <link>http://localhost:1313/post/the-biggest-mistake-is-you-think-you-have-time/</link>
+      <pubDate>Thu, 02 Jan 2020 13:01:25 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/the-biggest-mistake-is-you-think-you-have-time/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;When asked “What’s the biggest mistake we make in life?” the Buddha replied. ” The biggest mistake is you think you have time.”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;当被问及“人生最大的错误是什么”，佛说：“最大的错误是你认为你自己有时间。”&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>【译】生命的意义</title>
