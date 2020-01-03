@@ -20,5 +20,14 @@
       <description>&lt;p&gt;SQL(Structured Query Language) 是结构化查询语言的简称，它最重要的是数据库的操作语言。 对于学习数据库而言，学习SQL的使用是相当的重要!&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>PostgreSQL 安装及配置</title>
+      <link>http://localhost:1313/post/postgresql-install-and-configure/</link>
+      <pubDate>Thu, 26 Jul 2018 19:53:56 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/postgresql-install-and-configure/</guid>
+      <description>&lt;p&gt;本文主要包括PostgreSQL的安装、配置以及如何通过&lt;code&gt;Docker&lt;/code&gt;快速启动一个数据库,以便本地开发和测试。&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>
