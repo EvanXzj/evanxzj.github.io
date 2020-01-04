@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>brew on Chuidylan&#39;s Blog</title>
+    <link>http://localhost:1313/tags/brew/</link>
+    <description>Recent content in brew on Chuidylan&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 04 Jan 2020 13:00:15 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/brew/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>你不知道的Homebrew</title>
+      <link>http://localhost:1313/post/homebrew/</link>
+      <pubDate>Sat, 04 Jan 2020 13:00:15 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/homebrew/</guid>
+      <description>&lt;p&gt;Homebrew is a package manager for Mac OS. It lets you download binaries, packages, and applications with a single command.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,10 +6,29 @@
     <description>Recent content in Posts on Chuidylan&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 03 Jan 2020 10:02:42 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jan 2020 13:05:54 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The Easy Road or the Hard Road</title>
+      <link>http://localhost:1313/post/the-easy-road-or-the-hard-road/</link>
+      <pubDate>Sat, 04 Jan 2020 13:05:54 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/the-easy-road-or-the-hard-road/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Your educational journey is going to be hard. I can promise you that. There are two paths you can take, the easy road or the hard road.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我可以很确定地告诉你，你的求学过程，将会困难重重。你有两条路可选，容易的路，或者困难的路。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>你不知道的Homebrew</title>
+      <link>http://localhost:1313/post/homebrew/</link>
+      <pubDate>Sat, 04 Jan 2020 13:00:15 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/homebrew/</guid>
+      <description>&lt;p&gt;Homebrew is a package manager for Mac OS. It lets you download binaries, packages, and applications with a single command.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Postman使用自签名证书发送https请求</title>
