@@ -149,14 +149,14 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/postman/</loc>
+    <loc>http://localhost:1313/tags/postman/</loc>
     <lastmod>2020-01-03T10:02:42+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/postman/</loc>
+    <loc>http://localhost:1313/categories/postman/</loc>
     <lastmod>2020-01-03T10:02:42+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -228,6 +228,48 @@
   <url>
     <loc>http://localhost:1313/tags/%E9%98%85%E8%AF%BB/</loc>
     <lastmod>2019-12-31T13:07:47+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/javascript/</loc>
+    <lastmod>2019-12-12T16:22:47+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/lerna/</loc>
+    <lastmod>2019-12-12T16:22:47+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/lerna-getting-start/</loc>
+    <lastmod>2019-12-12T16:22:47+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/monorepo/</loc>
+    <lastmod>2019-12-12T16:22:47+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/node/</loc>
+    <lastmod>2019-12-12T16:22:47+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/workspaces/</loc>
+    <lastmod>2019-12-12T16:22:47+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -471,13 +513,6 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/javascript/</loc>
-    <lastmod>2018-08-29T21:41:52+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://localhost:1313/post/a-practical-guide-to-symbols-in-javascript/</loc>
     <lastmod>2018-08-29T21:41:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -506,13 +541,6 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/database/</loc>
-    <lastmod>2018-08-20T22:04:39+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://localhost:1313/tags/database/</loc>
     <lastmod>2018-08-20T22:04:39+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -520,7 +548,7 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/sql/</loc>
+    <loc>http://localhost:1313/categories/database/</loc>
     <lastmod>2018-08-20T22:04:39+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -528,6 +556,13 @@
   
   <url>
     <loc>http://localhost:1313/tags/sql/</loc>
+    <lastmod>2018-08-20T22:04:39+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/sql/</loc>
     <lastmod>2018-08-20T22:04:39+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -562,14 +597,14 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/postgres/</loc>
+    <loc>http://localhost:1313/tags/postgres/</loc>
     <lastmod>2018-07-26T19:53:56+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/postgres/</loc>
+    <loc>http://localhost:1313/categories/postgres/</loc>
     <lastmod>2018-07-26T19:53:56+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

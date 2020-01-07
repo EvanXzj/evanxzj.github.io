@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>lerna on Chuidylan&#39;s Blog</title>
+    <link>http://localhost:1313/tags/lerna/</link>
+    <description>Recent content in lerna on Chuidylan&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 12 Dec 2019 16:22:47 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/tags/lerna/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lerna Getting Start</title>
+      <link>http://localhost:1313/post/lerna-getting-start/</link>
+      <pubDate>Thu, 12 Dec 2019 16:22:47 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/lerna-getting-start/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;A tool for managing JavaScript projects with multiple packages.&lt;/p&gt;
+&lt;p&gt;— &lt;a href=&#34;https://lerna.js.org/&#34;&gt;Lerna Official Website&lt;/a&gt; Intro&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

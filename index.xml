@@ -77,6 +77,18 @@
     </item>
     
     <item>
+      <title>Lerna Getting Start</title>
+      <link>http://localhost:1313/post/lerna-getting-start/</link>
+      <pubDate>Thu, 12 Dec 2019 16:22:47 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/lerna-getting-start/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;A tool for managing JavaScript projects with multiple packages.&lt;/p&gt;
+&lt;p&gt;— &lt;a href=&#34;https://lerna.js.org/&#34;&gt;Lerna Official Website&lt;/a&gt; Intro&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
       <title>【转】When You Are Old</title>
       <link>http://localhost:1313/post/when-you-are-old/</link>
       <pubDate>Fri, 26 Apr 2019 11:33:03 +0800</pubDate>
