@@ -6,7 +6,7 @@
     <description>Recent content on Chuidylan&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 11 Jan 2020 10:29:39 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 12 Jan 2020 09:38:45 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,21 @@
       
       <guid>http://localhost:1313/about/</guid>
       <description>岁月如刀啊 两鬓的白发，满脸的皱纹以及佝偻的身影 那是岁月留下的痕迹 于是心生焦虑，奋起直追 浩瀚书海，虽是囫囵吞枣，只因怕来不及 愿岁月停留 等等迷失</description>
+    </item>
+    
+    <item>
+      <title>2020年一些可以做的事情</title>
+      <link>http://localhost:1313/post/2020-todos/</link>
+      <pubDate>Sun, 12 Jan 2020 09:38:45 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/2020-todos/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;每日&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;保证七个小时左右的睡眠&lt;/li&gt;
+&lt;li&gt;花半个小时去阅读&lt;/li&gt;
+&lt;li&gt;行走一公里的路程&lt;/li&gt;
+&lt;li&gt;30分钟整理自己的形象&lt;/li&gt;
+&lt;/ol&gt;</description>
     </item>
     
     <item>
@@ -87,10 +102,10 @@
     
     <item>
       <title>2019年阅读书单</title>
-      <link>http://localhost:1313/post/2091-reading-books/</link>
+      <link>http://localhost:1313/post/2019-reading-books/</link>
       <pubDate>Tue, 31 Dec 2019 13:07:47 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/2091-reading-books/</guid>
+      <guid>http://localhost:1313/post/2019-reading-books/</guid>
       <description>&lt;p&gt;2019年马上就要过去了， 所以就总结了一下这一年中看完的一些书籍&lt;/p&gt;</description>
     </item>
     
