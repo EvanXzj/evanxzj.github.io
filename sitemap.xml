@@ -9,78 +9,113 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2020-01-09T09:48:51+08:00</lastmod>
+    <loc>http://localhost:1313/tags/arena/</loc>
+    <lastmod>2020-01-12T10:29:39+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/centos/</loc>
-    <lastmod>2020-01-09T09:48:51+08:00</lastmod>
+    <loc>http://localhost:1313/categories/</loc>
+    <lastmod>2020-01-12T10:48:51+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2020-01-09T09:48:51+08:00</lastmod>
+    <lastmod>2020-01-12T10:48:51+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/docker/</loc>
-    <lastmod>2020-01-09T09:48:51+08:00</lastmod>
+    <loc>http://localhost:1313/categories/english/</loc>
+    <lastmod>2020-01-12T10:29:39+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/docker/</loc>
-    <lastmod>2020-01-09T09:48:51+08:00</lastmod>
+    <loc>http://localhost:1313/tags/life/</loc>
+    <lastmod>2020-01-12T10:29:39+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/execute-docker-commands-without-sudo/</loc>
-    <lastmod>2020-01-09T09:48:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/tags/linux/</loc>
-    <lastmod>2020-01-09T09:48:51+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/categories/linux/</loc>
-    <lastmod>2020-01-09T09:48:51+08:00</lastmod>
+    <loc>http://localhost:1313/post/life-is-like-an-arena/</loc>
+    <lastmod>2020-01-12T10:29:39+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2020-01-09T09:48:51+08:00</lastmod>
+    <lastmod>2020-01-12T10:48:51+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/reading/</loc>
+    <lastmod>2020-01-12T10:29:39+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2020-01-09T09:48:51+08:00</lastmod>
+    <lastmod>2020-01-12T10:48:51+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/centos/</loc>
+    <lastmod>2020-01-12T10:48:51+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/docker/</loc>
+    <lastmod>2020-01-12T10:48:51+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/docker/</loc>
+    <lastmod>2020-01-12T10:48:51+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/execute-docker-commands-without-sudo/</loc>
+    <lastmod>2020-01-12T10:48:51+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/categories/linux/</loc>
+    <lastmod>2020-01-12T10:48:51+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/linux/</loc>
+    <lastmod>2020-01-12T10:48:51+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/categories/ubuntu/</loc>
-    <lastmod>2020-01-09T09:48:51+08:00</lastmod>
+    <lastmod>2020-01-12T10:48:51+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -114,21 +149,7 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/english/</loc>
-    <lastmod>2020-01-04T13:05:54+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://localhost:1313/tags/idea/</loc>
-    <lastmod>2020-01-04T13:05:54+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/tags/life/</loc>
     <lastmod>2020-01-04T13:05:54+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -255,13 +276,6 @@
   
   <url>
     <loc>http://localhost:1313/tags/book/</loc>
-    <lastmod>2019-12-31T13:07:47+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/categories/reading/</loc>
     <lastmod>2019-12-31T13:07:47+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -590,14 +604,14 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/tags/sql/</loc>
+    <loc>http://localhost:1313/categories/sql/</loc>
     <lastmod>2018-08-20T22:04:39+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://localhost:1313/categories/sql/</loc>
+    <loc>http://localhost:1313/tags/sql/</loc>
     <lastmod>2018-08-20T22:04:39+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

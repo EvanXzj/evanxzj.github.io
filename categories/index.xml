@@ -6,10 +6,28 @@
     <description>Recent content in Categories on Chuidylan&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 09 Jan 2020 09:48:51 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jan 2020 10:29:39 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>English</title>
+      <link>http://localhost:1313/categories/english/</link>
+      <pubDate>Sat, 11 Jan 2020 10:29:39 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/english/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reading</title>
+      <link>http://localhost:1313/categories/reading/</link>
+      <pubDate>Sat, 11 Jan 2020 10:29:39 +0800</pubDate>
+      
+      <guid>http://localhost:1313/categories/reading/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>CentOs</title>
@@ -57,15 +75,6 @@
     </item>
     
     <item>
-      <title>English</title>
-      <link>http://localhost:1313/categories/english/</link>
-      <pubDate>Sat, 04 Jan 2020 13:05:54 +0800</pubDate>
-      
-      <guid>http://localhost:1313/categories/english/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Speech</title>
       <link>http://localhost:1313/categories/speech/</link>
       <pubDate>Sat, 04 Jan 2020 13:05:54 +0800</pubDate>
@@ -89,15 +98,6 @@
       <pubDate>Fri, 03 Jan 2020 10:02:42 +0800</pubDate>
       
       <guid>http://localhost:1313/categories/postman/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Reading</title>
-      <link>http://localhost:1313/categories/reading/</link>
-      <pubDate>Tue, 31 Dec 2019 13:07:47 +0800</pubDate>
-      
-      <guid>http://localhost:1313/categories/reading/</guid>
       <description></description>
     </item>
     

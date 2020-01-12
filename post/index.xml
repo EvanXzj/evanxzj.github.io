@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Chuidylan&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 09 Jan 2020 09:48:51 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jan 2020 10:29:39 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Life Is Like an Arena</title>
+      <link>http://localhost:1313/post/life-is-like-an-arena/</link>
+      <pubDate>Sat, 11 Jan 2020 10:29:39 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/life-is-like-an-arena/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Life is not a ride in a wonder park, where thrills and challenges are there only to excite you without a real intention of defeating you. Life is more like an arena where you must fight to survive. You are either defeated or a victor.&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Execute Docker Commands Without Sudo</title>
@@ -17,7 +26,7 @@
       <pubDate>Thu, 09 Jan 2020 09:48:51 +0800</pubDate>
       
       <guid>http://localhost:1313/post/execute-docker-commands-without-sudo/</guid>
-      <description>&lt;p&gt;Execute Docker Commands Without Sudo.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Execute Docker Commands Without Sudo On Linux.&lt;/p&gt;</description>
     </item>
     
     <item>
