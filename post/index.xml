@@ -241,9 +241,21 @@
     </item>
     
     <item>
+      <title>如何编写SQL，第1部分:命名约定</title>
+      <link>http://localhost:1313/post/database/how-do-i-write-sql/</link>
+      <pubDate>Thu, 26 Jul 2018 19:53:56 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/database/how-do-i-write-sql/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;There are only two hard problems in Computer Science: cache invalidation and naming things.&amp;rdquo;&lt;br&gt;
+— Phil Karlton&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
       <title>PostgreSQL 安装及配置</title>
       <link>http://localhost:1313/post/postgresql-install-and-configure/</link>
-      <pubDate>Thu, 26 Jul 2018 19:53:56 +0800</pubDate>
+      <pubDate>Sun, 15 Jul 2018 19:53:56 +0800</pubDate>
       
       <guid>http://localhost:1313/post/postgresql-install-and-configure/</guid>
       <description>&lt;p&gt;本文主要包括PostgreSQL的安装、配置以及如何通过&lt;code&gt;Docker&lt;/code&gt;快速启动一个数据库,以便本地开发和测试。&lt;/p&gt;</description>

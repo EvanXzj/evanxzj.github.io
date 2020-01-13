@@ -20,5 +20,17 @@
       <description>&lt;p&gt;SQL(Structured Query Language) 是结构化查询语言的简称，它最重要的是数据库的操作语言。 对于学习数据库而言，学习SQL的使用是相当的重要!&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>如何编写SQL，第1部分:命名约定</title>
+      <link>http://localhost:1313/post/database/how-do-i-write-sql/</link>
+      <pubDate>Thu, 26 Jul 2018 19:53:56 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/database/how-do-i-write-sql/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;There are only two hard problems in Computer Science: cache invalidation and naming things.&amp;rdquo;&lt;br&gt;
+— Phil Karlton&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
   </channel>
 </rss>
