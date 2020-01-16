@@ -13,10 +13,10 @@
     
     <item>
       <title>冒泡排序</title>
-      <link>http://localhost:1313/post/bubble-sort-algorithm/</link>
+      <link>http://localhost:1313/post/algorithm/bubble-sort-algorithm/</link>
       <pubDate>Fri, 10 Aug 2018 17:13:33 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/bubble-sort-algorithm/</guid>
+      <guid>http://localhost:1313/post/algorithm/bubble-sort-algorithm/</guid>
       <description>&lt;p&gt;冒泡排序(Bubble Sort), 是一种计算机科学领域的比较简单的排序算法，也是程序猿们在面试中常被问的排序算法之一。&lt;/p&gt;</description>
     </item>
     

@@ -13,10 +13,10 @@
     
     <item>
       <title>插入排序</title>
-      <link>http://localhost:1313/post/insertion-sort/</link>
+      <link>http://localhost:1313/post/algorithm/insertion-sort/</link>
       <pubDate>Tue, 18 Dec 2018 17:12:58 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/insertion-sort/</guid>
+      <guid>http://localhost:1313/post/algorithm/insertion-sort/</guid>
       <description>&lt;p&gt;&lt;strong&gt;插入排序&lt;/strong&gt;类似整理扑克牌，将每一张牌插到其他已经有序的牌中适当的位置。它也是重要的基本算法之一，也是面试者需要掌握的算法之一。&lt;/p&gt;</description>
     </item>
     
