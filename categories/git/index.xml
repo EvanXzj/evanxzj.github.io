@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Chuidylan&#39;s Blog</title>
+    <link>http://localhost:1313/categories/git/</link>
+    <description>Recent content in Git on Chuidylan&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 17 Jan 2020 09:34:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://localhost:1313/categories/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>撤销Commit</title>
+      <link>http://localhost:1313/post/reset-commit/</link>
+      <pubDate>Fri, 17 Jan 2020 09:34:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/reset-commit/</guid>
+      <description>&lt;p&gt;做笔记，做笔记， 做笔记。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,7 +6,7 @@
     <description>Recent content on Chuidylan&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 16 Jan 2020 10:42:08 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jan 2020 09:34:00 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,7 +21,16 @@
     </item>
     
     <item>
-      <title>Life Is Too Short to Live Someone Elses Dream</title>
+      <title>撤销Commit</title>
+      <link>http://localhost:1313/post/reset-commit/</link>
+      <pubDate>Fri, 17 Jan 2020 09:34:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/reset-commit/</guid>
+      <description>&lt;p&gt;做笔记，做笔记， 做笔记。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Life Is Too Short To Live Someone Elses Dream</title>
       <link>http://localhost:1313/post/english/life-is-too-short-to-live-someone-elses-dream/</link>
       <pubDate>Thu, 16 Jan 2020 10:42:08 +0800</pubDate>
       
