@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Node on Chuidylan&#39;s Blog</title>
-    <link>http://localhost:1313/categories/node/</link>
-    <description>Recent content in Node on Chuidylan&#39;s Blog</description>
+    <title>registry on Chuidylan&#39;s Blog</title>
+    <link>http://localhost:1313/tags/registry/</link>
+    <description>Recent content in registry on Chuidylan&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 20 Jan 2020 09:26:06 +0800</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/categories/node/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/tags/registry/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,18 +18,6 @@
       
       <guid>http://localhost:1313/post/setting-up-a-private-registry-with-verdaccio/</guid>
       <description>&lt;p&gt;Verdaccio is a lightweight private npm proxy registry built in Node.js,  today we are going talk about how setting up a private npm registry with verdaccio.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Lerna Getting Start</title>
-      <link>http://localhost:1313/post/lerna-getting-start/</link>
-      <pubDate>Thu, 12 Dec 2019 16:22:47 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/lerna-getting-start/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;A tool for managing JavaScript projects with multiple packages.&lt;/p&gt;
-&lt;p&gt;— &lt;a href=&#34;https://lerna.js.org/&#34;&gt;Lerna Official Website&lt;/a&gt; Intro&lt;/p&gt;
-&lt;/blockquote&gt;</description>
     </item>
     
   </channel>

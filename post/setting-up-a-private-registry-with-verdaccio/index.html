@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Setting Up a Private Registry With Verdaccio - Chuidylan&#39;s Blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="chuidylan" /><meta name="description" content="Setting Up a Private Registry With Verdaccio" /><meta name="keywords" content="npm, registry, node, verdaccio" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.61.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/setting-up-a-private-registry-with-verdaccio/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Setting Up a Private Registry With Verdaccio" />
+<meta property="og:description" content="Setting Up a Private Registry With Verdaccio" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/setting-up-a-private-registry-with-verdaccio/" />
+<meta property="article:published_time" content="2020-01-20T09:26:06+08:00" />
+<meta property="article:modified_time" content="2020-01-20T09:26:06+08:00" />
+<meta itemprop="name" content="Setting Up a Private Registry With Verdaccio">
+<meta itemprop="description" content="Setting Up a Private Registry With Verdaccio">
+<meta itemprop="datePublished" content="2020-01-20T09:26:06&#43;08:00" />
+<meta itemprop="dateModified" content="2020-01-20T09:26:06&#43;08:00" />
+<meta itemprop="wordCount" content="714">
+
+
+
+<meta itemprop="keywords" content="registry,node,npm,verdaccio," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Setting Up a Private Registry With Verdaccio"/>
+<meta name="twitter:description" content="Setting Up a Private Registry With Verdaccio"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Chuidylan&#39;s Blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Chuidylan&#39;s Blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Setting Up a Private Registry With Verdaccio</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-01-20 </span>
+        <div class="post-category">
+            <a href="/categories/node/"> Node </a>
+            <a href="/categories/linux/"> Linux </a>
+            <a href="/categories/javascript/"> Javascript </a>
+            </div>
+          <span class="more-meta"> 714 words </span>
+          <span class="more-meta"> 4 mins read </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#install-node">Install node</a></li>
+    <li><a href="#install-verdaccio">Install verdaccio</a></li>
+    <li><a href="#install-pm2">Install pm2</a></li>
+    <li><a href="#install-nginx">Install nginx</a></li>
+    <li><a href="#verdaccio-configuration">Verdaccio configuration</a></li>
+    <li><a href="#start-verdaccio">Start verdaccio</a></li>
+    <li><a href="#using-verdaccio">Using verdaccio</a></li>
+    <li><a href="#reference">Reference</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>Verdaccio is a lightweight private npm proxy registry built in Node.js,  today we are going talk about how setting up a private npm registry with verdaccio.</p>
+<h2 id="install-node">Install node</h2>
+<p>Maybe we will have multiple active node versions, <a href="https://github.com/nvm-sh/nvm">nvm</a>  is a good choice.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># install nvm</span>
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh <span class="p">|</span> bash
+
+<span class="c1"># setup nvm</span>
+cat &gt;&gt;.bash_profile<span class="s">&lt;&lt;EOF
+</span><span class="s"># nvm config
+</span><span class="s">export NVM_DIR=&#34;$HOME/.nvm&#34;
+</span><span class="s">[ -s &#34;$NVM_DIR/nvm.sh&#34; ] &amp;&amp; \. &#34;$NVM_DIR/nvm.sh&#34;  # This loads nvm
+</span><span class="s">[ -s &#34;$NVM_DIR/bash_completion&#34; ] &amp;&amp; \. &#34;$NVM_DIR/bash_completion&#34;  # This loads nvm bash_completion
+</span><span class="s">EOF</span>
+
+<span class="c1"># install newest lts node</span>
+nvm install <span class="o">(</span>nvm ls-remote --lts <span class="p">|</span>  tail -n <span class="m">1</span> <span class="p">|</span> awk <span class="s1">&#39;{ print $1}&#39;</span><span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="install-verdaccio">Install verdaccio</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># npm</span>
+npm install -g verdaccio
+
+<span class="c1"># or yarn</span>
+yarn global add verdaccio
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="install-pm2">Install pm2</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># for restarting and monitoring</span>
+npm install -g pm2
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="install-nginx">Install nginx</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">lsb_release  -a
+<span class="c1"># LSB Version:    :core-4.1-amd64:core-4.1-noarch</span>
+<span class="c1"># Distributor ID: CentOS</span>
+<span class="c1"># Description:    CentOS Linux release 7.3.1611 (Core)</span>
+<span class="c1"># Release:        7.3.1611</span>
+<span class="c1"># Codename:       Core</span>
+
+
+<span class="c1">######## centos7</span>
+sudo yum install epel-release
+sudo yum install nginx
+sudo systemctl start nginx
+<span class="c1">#If you are running a firewall, run the following commands to allow HTTP and HTTPS traffic:</span>
+sudo firewall-cmd --permanent --zone<span class="o">=</span>public --add-service<span class="o">=</span>http 
+sudo firewall-cmd --permanent --zone<span class="o">=</span>public --add-service<span class="o">=</span>https
+sudo firewall-cmd --reload
+
+<span class="c1">######## ubuntu</span>
+sudo apt-get update
+sudo apt-get install nginx
+<span class="c1">## firewall setup</span>
+sudo ufw app list
+sudo ufw allow <span class="s1">&#39;Nginx HTTP&#39;</span>
+sudo ufw allow <span class="s1">&#39;Nginx HTTPS&#39;</span>
+sudo ufw status
+
+<span class="c1">######## enable nginx to start at boot</span>
+sudo systemctl <span class="nb">enable</span> nginx
+
+<span class="c1">######## check your installation: visiting your server’s public IP address in your web browser</span>
+http://server_domain_name_or_IP/
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="verdaccio-configuration">Verdaccio configuration</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yml" data-lang="yml"><span class="c">#</span><span class="w">
+</span><span class="w"></span><span class="c"># This is the default config file. It allows all users to do anything,</span><span class="w">
+</span><span class="w"></span><span class="c"># so don&#39;t use it on production systems.</span><span class="w">
+</span><span class="w"></span><span class="c">#</span><span class="w">
+</span><span class="w"></span><span class="c"># Look here for more config file examples:</span><span class="w">
+</span><span class="w"></span><span class="c"># https://github.com/verdaccio/verdaccio/tree/master/conf</span><span class="w">
+</span><span class="w"></span><span class="c">#</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="c"># path to a directory with all packages</span><span class="w">
+</span><span class="w"></span>storage<span class="p">:</span><span class="w"> </span>./storage<span class="w">
+</span><span class="w"></span><span class="c"># path to a directory with plugins to include</span><span class="w">
+</span><span class="w"></span>plugins<span class="p">:</span><span class="w"> </span>./plugins<span class="w">
+</span><span class="w">
+</span><span class="w"></span>web<span class="p">:</span><span class="w">
+</span><span class="w">  </span>title<span class="p">:</span><span class="w"> </span>Verdaccio<span class="w">
+</span><span class="w">  </span><span class="c"># comment out to disable gravatar support</span><span class="w">
+</span><span class="w">  </span><span class="c"># gravatar: false</span><span class="w">
+</span><span class="w">  </span><span class="c"># by default packages are ordercer ascendant (asc|desc)</span><span class="w">
+</span><span class="w">  </span><span class="c"># sort_packages: asc</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span>auth<span class="p">:</span><span class="w">
+</span><span class="w">  </span>htpasswd<span class="p">:</span><span class="w">
+</span><span class="w">    </span>file<span class="p">:</span><span class="w"> </span>./htpasswd<span class="w">
+</span><span class="w">    </span><span class="c"># Maximum amount of users allowed to register, defaults to &#34;+inf&#34;.</span><span class="w">
+</span><span class="w">    </span><span class="c"># You can set this to -1 to disable registration.</span><span class="w">
+</span><span class="w">    </span><span class="c"># max_users: 1000</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="c"># a list of other known repositories we can talk to</span><span class="w">
+</span><span class="w"></span>uplinks<span class="p">:</span><span class="w">
+</span><span class="w">  </span>npmjs<span class="p">:</span><span class="w">
+</span><span class="w">    </span>url<span class="p">:</span><span class="w"> </span>https<span class="p">:</span>//registry.npmjs.org/<span class="w">
+</span><span class="w">
+</span><span class="w"></span>packages<span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="s1">&#39;@*/*&#39;</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="c"># scoped packages</span><span class="w">
+</span><span class="w">    </span>access<span class="p">:</span><span class="w"> </span>$all<span class="w">
+</span><span class="w">    </span>publish<span class="p">:</span><span class="w"> </span>$authenticated<span class="w">
+</span><span class="w">    </span>unpublish<span class="p">:</span><span class="w"> </span>$authenticated<span class="w">
+</span><span class="w">    </span>proxy<span class="p">:</span><span class="w"> </span>npmjs<span class="w">
+</span><span class="w">
+</span><span class="w">  </span><span class="s1">&#39;**&#39;</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="c"># allow all users (including non-authenticated users) to read and</span><span class="w">
+</span><span class="w">    </span><span class="c"># publish all packages</span><span class="w">
+</span><span class="w">    </span><span class="c">#</span><span class="w">
+</span><span class="w">    </span><span class="c"># you can specify usernames/groupnames (depending on your auth plugin)</span><span class="w">
+</span><span class="w">    </span><span class="c"># and three keywords: &#34;$all&#34;, &#34;$anonymous&#34;, &#34;$authenticated&#34;</span><span class="w">
+</span><span class="w">    </span>access<span class="p">:</span><span class="w"> </span>$all<span class="w">
+</span><span class="w">
+</span><span class="w">    </span><span class="c"># allow all known users to publish/publish packages</span><span class="w">
+</span><span class="w">    </span><span class="c"># (anyone can register by default, remember?)</span><span class="w">
+</span><span class="w">    </span>publish<span class="p">:</span><span class="w"> </span>$authenticated<span class="w">
+</span><span class="w">    </span>unpublish<span class="p">:</span><span class="w"> </span>$authenticated<span class="w">
+</span><span class="w">
+</span><span class="w">    </span><span class="c"># if package is not available locally, proxy requests to &#39;npmjs&#39; registry</span><span class="w">
+</span><span class="w">    </span>proxy<span class="p">:</span><span class="w"> </span>npmjs<span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="c"># You can specify HTTP/1.1 server keep alive timeout in seconds for incoming connections.</span><span class="w">
+</span><span class="w"></span><span class="c"># A value of 0 makes the http server behave similarly to Node.js versions prior to 8.0.0, which did not have a keep-alive timeout.</span><span class="w">
+</span><span class="w"></span><span class="c"># WORKAROUND: Through given configuration you can workaround following issue https://github.com/verdaccio/verdaccio/issues/301. Set to 0 in case 60 is not enough.</span><span class="w">
+</span><span class="w"></span>server<span class="p">:</span><span class="w">
+</span><span class="w">  </span>keepAliveTimeout<span class="p">:</span><span class="w"> </span><span class="m">60</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span>middlewares<span class="p">:</span><span class="w">
+</span><span class="w">  </span>audit<span class="p">:</span><span class="w">
+</span><span class="w">    </span>enabled<span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="c"># log settings</span><span class="w">
+</span><span class="w"></span>logs<span class="p">:</span><span class="w">
+</span><span class="w">  </span>-<span class="w"> </span>{<span class="w"> </span>type<span class="p">:</span><span class="w"> </span>stdout<span class="p">,</span><span class="w"> </span>format<span class="p">:</span><span class="w"> </span>pretty<span class="p">,</span><span class="w"> </span>level<span class="p">:</span><span class="w"> </span>http<span class="w"> </span>}<span class="w">
+</span><span class="w">  </span><span class="c">#- {type: file, path: verdaccio.log, level: info}</span><span class="w">
+</span><span class="w"></span><span class="c">#experiments:</span><span class="w">
+</span><span class="w"></span><span class="c">#  # support for npm token command</span><span class="w">
+</span><span class="w"></span><span class="c">#  token: false</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="c"># you can specify listen address (or simply a port)</span><span class="w">
+</span><span class="w"></span><span class="c"># listen: 0.0.0.0:4873</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h2 id="start-verdaccio">Start verdaccio</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">pm2 start <span class="sb">`</span>which verdaccio<span class="sb">`</span> -- -c /path/to/your/config
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="using-verdaccio">Using verdaccio</h2>
+<p>npm will use the default registry on install, but we are willing to use our own registry, to achieve that use the <code>--registry</code> argument to provide a different location.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">npm install --registry http://xxx.xxx.xxx.xxx
+</code></pre></td></tr></table>
+</div>
+</div><p>Other options I’d suggest if you need to switch between registries is using <a href="https://github.com/Pana/nrm">nrm</a>, to install it just do</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">npm install -g nrm
+</code></pre></td></tr></table>
+</div>
+</div><p>By default verdaccio requires authentication for publishing, thus we need to log in.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">npm adduser --registry  http://xxx.xxx.xxx.xxx
+</code></pre></td></tr></table>
+</div>
+</div><p>Once you are logged, it’s the moment to publish.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">npm publish --registry  http://xxx.xxx.xxx.xxx
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="reference">Reference</h2>
+<ul>
+<li>
+<p><a href="https://pm2.keymetrics.io/docs/usage/quick-start/">https://pm2.keymetrics.io/docs/usage/quick-start/</a></p>
+</li>
+<li>
+<p><a href="https://github.com/nvm-sh/nvm#installing-and-updating">https://github.com/nvm-sh/nvm#installing-and-updating</a></p>
+</li>
+<li>
+<p><a href="https://verdaccio.org/docs/en/installation">https://verdaccio.org/docs/en/installation</a></p>
+</li>
+<li>
+<p><a href="https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-centos-7">https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-centos-7</a></p>
+</li>
+</ul>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">chuidylan</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-01-20
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/registry/">registry</a>
+          <a href="/tags/node/">node</a>
+          <a href="/tags/npm/">npm</a>
+          <a href="/tags/verdaccio/">verdaccio</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/reset-commit/">
+            <span class="next-text nav-default">撤销Commit</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'chuidylan';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:chuidylan@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/EvanXzj" class="iconfont icon-github" title="github"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> site uv: <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">chuidylan</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
